@@ -2,9 +2,9 @@
 """Card class that represents a playing card and its image file name."""
 
 class Card:
-    FACES = ['Ace', '2', '3', '4', '5', '6',
-             '7', '8', '9', '10', 'Jack', 'Queen', 'King']
-    SUITS = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+    FACES = ['ace', '2', '3', '4', '5', '6',
+             '7', '8', '9', '10', 'jack', 'queen', 'king']
+    SUITS = ['hearts', 'diamonds', 'clubs', 'spades']
 
     def __init__(self, face, suit):
         """Initialize a Card with a face and suit."""
