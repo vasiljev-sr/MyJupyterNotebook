@@ -106,9 +106,9 @@ QDateEdit:hover {
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>90</x>
       <y>170</y>
-      <width>441</width>
+      <width>271</width>
       <height>211</height>
      </rect>
     </property>
@@ -124,7 +124,7 @@ QDateEdit:hover {
      <rect>
       <x>450</x>
       <y>170</y>
-      <width>441</width>
+      <width>271</width>
       <height>211</height>
      </rect>
     </property>
@@ -133,6 +133,68 @@ QDateEdit:hover {
     </property>
     <property name="pixmap">
      <pixmap>../../Снимок экрана в 2021-03-10 22-27-13.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>380</y>
+      <width>341</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+                                         
+    background-color:#262a2f; 
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #262a2f; 
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #ffffff;
+}
+QLabel:hover {
+    background: #262a2f; 
+    color:#ff5533;
+} </string>
+    </property>
+    <property name="text">
+     <string>График роботы 1 машины за текущий месяц</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>380</y>
+      <width>341</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+                                         
+    background-color:#262a2f; 
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #262a2f; 
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #ffffff;
+}
+QLabel:hover {
+    background: #262a2f; 
+    color:#ff5533;
+} </string>
+    </property>
+    <property name="text">
+     <string>График роботы 2 машины за текущий месяц</string>
     </property>
    </widget>
   </widget>
