@@ -1,0 +1,1 @@
+pyuic5 C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\ui\newWindow.ui -o C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\AppMainWindow1.py
