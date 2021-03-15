@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
         self.btn_toggle.setSizePolicy(sizePolicy)
         self.btn_toggle.setStyleSheet("QPushButton {\n"
 "                                         \n"
-"    background-color: #262a2f;\n"
+"    background-color: #232323;\n"
 "    border-style: solid;\n"
 "    border-width: 0px;\n"
 "    border-radius: 0px;\n"
@@ -62,14 +62,19 @@ class Ui_MainWindow(object):
 "    color:  #ff5533;\n"
 "}\n"
 "QPushButton:hover {\n"
-"    background:  #ff5533;\n"
+"    background:  #232323;\n"
 "    color:#262a2f;\n"
 "} \n"
 "QPushButton:pressed {                              \n"
-"   background: #262a2f;\n"
+"   background: #ff5533;\n"
 "   border-style: solid; \n"
 "   color:#ff5533;\n"
 "}")
+        self.btn_toggle.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("toggle_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_toggle.setIcon(icon)
+        self.btn_toggle.setIconSize(QtCore.QSize(32, 32))
         self.btn_toggle.setObjectName("btn_toggle")
         self.verticalLayout_2.addWidget(self.btn_toggle)
         self.horizontalLayout.addWidget(self.frame_toogle)
@@ -110,6 +115,7 @@ class Ui_MainWindow(object):
         self.btn_cur_mon = QtWidgets.QPushButton(self.frame_top_menus)
         self.btn_cur_mon.setMinimumSize(QtCore.QSize(0, 40))
         self.btn_cur_mon.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(85, 255, 255);\n"
 "                                         \n"
 "    background-color: #232323;\n"
 "    border-style: solid;\n"
@@ -120,12 +126,13 @@ class Ui_MainWindow(object):
 "    padding: 0px;\n"
 "    color:  #ff5533;\n"
 "}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background:  #ff5533;\n"
 "    color:#262a2f;\n"
 "} \n"
 "QPushButton:pressed {                              \n"
-"   background: #262a2f;\n"
+"   background:#2d2d2d;\n"
 "   border-style: solid; \n"
 "   color:#ff5533;\n"
 "}")
@@ -149,7 +156,7 @@ class Ui_MainWindow(object):
 "    color:#262a2f;\n"
 "} \n"
 "QPushButton:pressed {                              \n"
-"   background: #262a2f;\n"
+"   background:#2d2d2d;\n"
 "   border-style: solid; \n"
 "   color:#ff5533;\n"
 "}")
@@ -173,7 +180,7 @@ class Ui_MainWindow(object):
 "    color:#262a2f;\n"
 "} \n"
 "QPushButton:pressed {                              \n"
-"   background: #262a2f;\n"
+"   background: #2d2d2d;\n"
 "   border-style: solid; \n"
 "   color:#ff5533;\n"
 "}")
@@ -190,6 +197,162 @@ class Ui_MainWindow(object):
         self.Pages_Widjet = QtWidgets.QStackedWidget(self.frame_pages)
         self.Pages_Widjet.setMinimumSize(QtCore.QSize(0, 40))
         self.Pages_Widjet.setObjectName("Pages_Widjet")
+        self.selected_data_page = QtWidgets.QWidget()
+        self.selected_data_page.setObjectName("selected_data_page")
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.selected_data_page)
+        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_10.setSpacing(0)
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
+        self.options_frame_selected = QtWidgets.QFrame(self.selected_data_page)
+        self.options_frame_selected.setMinimumSize(QtCore.QSize(0, 40))
+        self.options_frame_selected.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.options_frame_selected.setStyleSheet("background-color: rgb(45, 45, 45);")
+        self.options_frame_selected.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.options_frame_selected.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.options_frame_selected.setObjectName("options_frame_selected")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.options_frame_selected)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.frame = QtWidgets.QFrame(self.options_frame_selected)
+        self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.date_in = QtWidgets.QDateEdit(self.frame)
+        self.date_in.setMinimumSize(QtCore.QSize(130, 25))
+        self.date_in.setStyleSheet("QDateEdit {                                  \n"
+"    background-color: #262a2f; \n"
+"    border-style: solid;\n"
+"    border-width: 2px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  16px;\n"
+"    min-width: 5em;\n"
+"    padding: 0px;\n"
+"    color: #ffffff; \n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.date_in.setWrapping(False)
+        self.date_in.setFrame(True)
+        self.date_in.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.date_in.setReadOnly(False)
+        self.date_in.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
+        self.date_in.setAccelerated(False)
+        self.date_in.setProperty("showGroupSeparator", True)
+        self.date_in.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 9, 14), QtCore.QTime(0, 0, 0)))
+        self.date_in.setMinimumDate(QtCore.QDate(2021, 1, 1))
+        self.date_in.setMaximumTime(QtCore.QTime(0, 0, 0))
+        self.date_in.setCalendarPopup(True)
+        self.date_in.setTimeSpec(QtCore.Qt.TimeZone)
+        self.date_in.setObjectName("date_in")
+        self.horizontalLayout_4.addWidget(self.date_in)
+        self.date_out = QtWidgets.QDateEdit(self.frame)
+        self.date_out.setMinimumSize(QtCore.QSize(130, 25))
+        self.date_out.setStyleSheet("QDateEdit {\n"
+"                                         \n"
+"    background-color: #262a2f; \n"
+"    border-style: solid;\n"
+"    border-width: 2px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  16px;\n"
+"    min-width: 5em;\n"
+"    padding: 0px;\n"
+"    color: #ffffff; \n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.date_out.setWrapping(False)
+        self.date_out.setFrame(True)
+        self.date_out.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.date_out.setReadOnly(False)
+        self.date_out.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
+        self.date_out.setAccelerated(False)
+        self.date_out.setProperty("showGroupSeparator", True)
+        self.date_out.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 9, 15), QtCore.QTime(0, 0, 0)))
+        self.date_out.setMinimumDate(QtCore.QDate(2021, 1, 1))
+        self.date_out.setMaximumTime(QtCore.QTime(0, 0, 0))
+        self.date_out.setCalendarPopup(True)
+        self.date_out.setDate(QtCore.QDate(2021, 9, 15))
+        self.date_out.setObjectName("date_out")
+        self.horizontalLayout_4.addWidget(self.date_out)
+        self.horizontalLayout_3.addWidget(self.frame, 0, QtCore.Qt.AlignLeft)
+        self.frame_2 = QtWidgets.QFrame(self.options_frame_selected)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.update_selected_date = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.update_selected_date.sizePolicy().hasHeightForWidth())
+        self.update_selected_date.setSizePolicy(sizePolicy)
+        self.update_selected_date.setMinimumSize(QtCore.QSize(150, 25))
+        self.update_selected_date.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.update_selected_date.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.update_selected_date.setAcceptDrops(False)
+        self.update_selected_date.setToolTip("")
+        self.update_selected_date.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.update_selected_date.setStyleSheet("QPushButton {\n"
+"                                         \n"
+"    background-color: #ff5533;\n"
+"    border-style: solid;\n"
+"    border-width: 2px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  16px;\n"
+"    min-width: 5em;\n"
+"    padding: 0px;\n"
+"    color: #1e2027;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background: #262a2f; \n"
+"    color:#ff5533;\n"
+"} \n"
+"QPushButton:pressed {                              \n"
+"   background: #262a2f;\n"
+"   border-style: solid; \n"
+"   color:#ff5533;\n"
+"}")
+        self.update_selected_date.setAutoDefault(False)
+        self.update_selected_date.setDefault(False)
+        self.update_selected_date.setObjectName("update_selected_date")
+        self.horizontalLayout_5.addWidget(self.update_selected_date)
+        spacerItem = QtWidgets.QSpacerItem(25, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem)
+        self.horizontalLayout_3.addWidget(self.frame_2, 0, QtCore.Qt.AlignRight)
+        self.verticalLayout_10.addWidget(self.options_frame_selected)
+        self.plot_frame_selected = QtWidgets.QFrame(self.selected_data_page)
+        self.plot_frame_selected.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.plot_frame_selected.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.plot_frame_selected.setObjectName("plot_frame_selected")
+        self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.plot_frame_selected)
+        self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_11.setSpacing(0)
+        self.verticalLayout_11.setObjectName("verticalLayout_11")
+        self.selected_plot_widget = QtWidgets.QWidget(self.plot_frame_selected)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.selected_plot_widget.sizePolicy().hasHeightForWidth())
+        self.selected_plot_widget.setSizePolicy(sizePolicy)
+        self.selected_plot_widget.setStyleSheet("\n"
+"background-color: rgb(45, 45, 45);")
+        self.selected_plot_widget.setObjectName("selected_plot_widget")
+        self.verticalLayout_11.addWidget(self.selected_plot_widget)
+        self.verticalLayout_10.addWidget(self.plot_frame_selected)
+        self.Pages_Widjet.addWidget(self.selected_data_page)
         self.curr_mon_page = QtWidgets.QWidget()
         self.curr_mon_page.setObjectName("curr_mon_page")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.curr_mon_page)
@@ -204,7 +367,7 @@ class Ui_MainWindow(object):
         self.options_frame_curr.setFrameShadow(QtWidgets.QFrame.Raised)
         self.options_frame_curr.setObjectName("options_frame_curr")
         self.update_curr_mon = QtWidgets.QPushButton(self.options_frame_curr)
-        self.update_curr_mon.setGeometry(QtCore.QRect(630, 0, 131, 31))
+        self.update_curr_mon.setGeometry(QtCore.QRect(10, 0, 131, 31))
         self.update_curr_mon.setStyleSheet("QPushButton {\n"
 "                                         \n"
 "    background-color: #ff5533;\n"
@@ -227,32 +390,6 @@ class Ui_MainWindow(object):
 "   color:#ff5533;\n"
 "}")
         self.update_curr_mon.setObjectName("update_curr_mon")
-        self.time_curr_mon = QtWidgets.QTextEdit(self.options_frame_curr)
-        self.time_curr_mon.setGeometry(QtCore.QRect(10, 0, 81, 31))
-        font = QtGui.QFont()
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.time_curr_mon.setFont(font)
-        self.time_curr_mon.setStyleSheet("QTextEdit {\n"
-"                                         \n"
-"    background-color: #262a2f; \n"
-"    border-style: solid;\n"
-"    border-width: 2px;\n"
-"    border-radius: 0px;\n"
-"    border-color: #ff5533;\n"
-"    font:  16px;\n"
-"    min-width: 1em;\n"
-"    padding: 0px;\n"
-"    color: #ffffff;\n"
-"}\n"
-"QTextEdit:hover {\n"
-"    background: #262a2f; \n"
-"    color:#ffffff;\n"
-"} ")
-        self.time_curr_mon.setLineWrapColumnOrWidth(0)
-        self.time_curr_mon.setObjectName("time_curr_mon")
         self.label = QtWidgets.QLabel(self.options_frame_curr)
         self.label.setGeometry(QtCore.QRect(290, 10, 131, 16))
         self.label.setStyleSheet("color: rgb(255, 255, 255);")
@@ -298,7 +435,7 @@ class Ui_MainWindow(object):
         self.options_frame_prev.setFrameShadow(QtWidgets.QFrame.Raised)
         self.options_frame_prev.setObjectName("options_frame_prev")
         self.update_prev_mon = QtWidgets.QPushButton(self.options_frame_prev)
-        self.update_prev_mon.setGeometry(QtCore.QRect(630, 0, 131, 31))
+        self.update_prev_mon.setGeometry(QtCore.QRect(10, 0, 131, 31))
         self.update_prev_mon.setStyleSheet("QPushButton {\n"
 "                                         \n"
 "    background-color: #ff5533;\n"
@@ -321,32 +458,6 @@ class Ui_MainWindow(object):
 "   color:#ff5533;\n"
 "}")
         self.update_prev_mon.setObjectName("update_prev_mon")
-        self.time_prev_mon = QtWidgets.QTextEdit(self.options_frame_prev)
-        self.time_prev_mon.setGeometry(QtCore.QRect(10, 0, 81, 31))
-        font = QtGui.QFont()
-        font.setPointSize(-1)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.time_prev_mon.setFont(font)
-        self.time_prev_mon.setStyleSheet("QTextEdit {\n"
-"                                         \n"
-"    background-color: #262a2f; \n"
-"    border-style: solid;\n"
-"    border-width: 2px;\n"
-"    border-radius: 0px;\n"
-"    border-color: #ff5533;\n"
-"    font:  16px;\n"
-"    min-width: 1em;\n"
-"    padding: 0px;\n"
-"    color: #ffffff;\n"
-"}\n"
-"QTextEdit:hover {\n"
-"    background: #262a2f; \n"
-"    color:#ffffff;\n"
-"} ")
-        self.time_prev_mon.setLineWrapColumnOrWidth(0)
-        self.time_prev_mon.setObjectName("time_prev_mon")
         self.label_2 = QtWidgets.QLabel(self.options_frame_prev)
         self.label_2.setGeometry(QtCore.QRect(350, 10, 131, 16))
         self.label_2.setStyleSheet("color: rgb(255, 255, 255);")
@@ -380,28 +491,18 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.Pages_Widjet.setCurrentIndex(1)
+        self.Pages_Widjet.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.btn_toggle.setText(_translate("MainWindow", "TOGGLE"))
         self.btn_cur_mon.setText(_translate("MainWindow", "Текущий месяц"))
         self.btn_prev_mon.setText(_translate("MainWindow", "Прошлый месяц"))
         self.btn_select_date.setText(_translate("MainWindow", "Выбрать дату"))
-        self.update_curr_mon.setText(_translate("MainWindow", "Обновить"))
-        self.time_curr_mon.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:16px; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16px;\">300</span></p></body></html>"))
+        self.update_selected_date.setText(_translate("MainWindow", "Показать"))
+        self.update_curr_mon.setText(_translate("MainWindow", "Показать"))
         self.label.setText(_translate("MainWindow", "Текущий месяц"))
         self.label_3.setText(_translate("MainWindow", "Текущий месяц"))
-        self.update_prev_mon.setText(_translate("MainWindow", "Обновить"))
-        self.time_prev_mon.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:16px; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16px;\">300</span></p></body></html>"))
+        self.update_prev_mon.setText(_translate("MainWindow", "Показать"))
         self.label_2.setText(_translate("MainWindow", "Прошлый месяц"))
