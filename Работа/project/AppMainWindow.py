@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'newWindow.ui'
+# Form implementation generated from reading ui file 'newWindow1.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import resources
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -35,8 +35,32 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame_toogle = QtWidgets.QFrame(self.top_bar)
-        self.frame_toogle.setMaximumSize(QtCore.QSize(70, 40))
-        self.frame_toogle.setStyleSheet("background-color: rgb(35, 35, 35);")
+        self.frame_toogle.setMaximumSize(QtCore.QSize(50, 40))
+        self.frame_toogle.setStyleSheet("QFrame{\n"
+"    background-color: #232323;\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton {\n"
+"                                         \n"
+"    background-color: #232323;\n"
+"    border-style: solid;\n"
+"    border-width:0px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  14px;\n"
+"    padding: 0px;\n"
+"    color:  #ff5533;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background:  #2d2d2d;\n"
+"    color:#262a2f;\n"
+"} \n"
+"QPushButton:pressed {                              \n"
+"   background: #2d2d2d;\n"
+"   border-style: solid; \n"
+"   color:#ff5533;\n"
+"}")
         self.frame_toogle.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_toogle.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_toogle.setObjectName("frame_toogle")
@@ -50,30 +74,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_toggle.sizePolicy().hasHeightForWidth())
         self.btn_toggle.setSizePolicy(sizePolicy)
-        self.btn_toggle.setStyleSheet("QPushButton {\n"
-"                                         \n"
-"    background-color: #232323;\n"
-"    border-style: solid;\n"
-"    border-width: 0px;\n"
-"    border-radius: 0px;\n"
-"    border-color: #ff5533;\n"
-"    font:  14px;\n"
-"    padding: 0px;\n"
-"    color:  #ff5533;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background:  #232323;\n"
-"    color:#262a2f;\n"
-"} \n"
-"QPushButton:pressed {                              \n"
-"   background: #ff5533;\n"
-"   border-style: solid; \n"
-"   color:#ff5533;\n"
-"}")
+        self.btn_toggle.setStyleSheet("background-image: url(:/res_files/menu.png);\n"
+"background-repeat:none;\n"
+"background-position: center ;\n"
+"")
         self.btn_toggle.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("toggle_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_toggle.setIcon(icon)
         self.btn_toggle.setIconSize(QtCore.QSize(32, 32))
         self.btn_toggle.setObjectName("btn_toggle")
         self.verticalLayout_2.addWidget(self.btn_toggle)
@@ -94,27 +99,22 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.frame_left_menu = QtWidgets.QFrame(self.content)
-        self.frame_left_menu.setMinimumSize(QtCore.QSize(150, 0))
-        self.frame_left_menu.setMaximumSize(QtCore.QSize(70, 16777215))
+        self.frame_left_menu.setMinimumSize(QtCore.QSize(50, 0))
+        self.frame_left_menu.setMaximumSize(QtCore.QSize(50, 16777215))
         self.frame_left_menu.setStyleSheet("background-color: rgb(35, 35, 35);")
         self.frame_left_menu.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_left_menu.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_left_menu.setObjectName("frame_left_menu")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_left_menu)
-        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setContentsMargins(10, 0, 0, 0)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.frame_top_menus = QtWidgets.QFrame(self.frame_left_menu)
-        self.frame_top_menus.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.frame_top_menus.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_top_menus.setObjectName("frame_top_menus")
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_top_menus)
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_4.setSpacing(0)
-        self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.btn_cur_mon = QtWidgets.QPushButton(self.frame_top_menus)
-        self.btn_cur_mon.setMinimumSize(QtCore.QSize(0, 40))
-        self.btn_cur_mon.setStyleSheet("QPushButton {\n"
+        self.frame_top_menus.setStyleSheet("QFrame{\n"
+"background-color: rgb(45, 45, 45);\n"
+"\n"
+"}\n"
+"QPushButton {\n"
 "    background-color: rgb(85, 255, 255);\n"
 "                                         \n"
 "    background-color: #232323;\n"
@@ -123,67 +123,52 @@ class Ui_MainWindow(object):
 "    border-radius: 0px;\n"
 "    border-color: #ff5533;\n"
 "    font:  14px;\n"
-"    padding: 0px;\n"
+"    padding: 10px 0px;\n"
 "    color:  #ff5533;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background:  #ff5533;\n"
-"    color:#262a2f;\n"
+"    background:  #2d2d2d;\n"
+"    color: #ff5533;\n"
 "} \n"
 "QPushButton:pressed {                              \n"
-"   background:#2d2d2d;\n"
+"   background:#232323;\n"
 "   border-style: solid; \n"
 "   color:#ff5533;\n"
 "}")
+        self.frame_top_menus.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_top_menus.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_top_menus.setObjectName("frame_top_menus")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_top_menus)
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.btn_cur_mon = QtWidgets.QPushButton(self.frame_top_menus)
+        self.btn_cur_mon.setMinimumSize(QtCore.QSize(150, 40))
+        self.btn_cur_mon.setStyleSheet("background-image: url(:/res_files/icon_curr.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;\n"
+"")
+        self.btn_cur_mon.setIconSize(QtCore.QSize(16, 16))
         self.btn_cur_mon.setObjectName("btn_cur_mon")
         self.verticalLayout_4.addWidget(self.btn_cur_mon)
         self.btn_prev_mon = QtWidgets.QPushButton(self.frame_top_menus)
-        self.btn_prev_mon.setMinimumSize(QtCore.QSize(0, 40))
-        self.btn_prev_mon.setStyleSheet("QPushButton {\n"
-"                                         \n"
-"    background-color: #232323;\n"
-"    border-style: solid;\n"
-"    border-width: 0px;\n"
-"    border-radius: 0px;\n"
-"    border-color: #ff5533;\n"
-"    font:  14px;\n"
-"    padding: 0px;\n"
-"    color:  #ff5533;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background:  #ff5533;\n"
-"    color:#262a2f;\n"
-"} \n"
-"QPushButton:pressed {                              \n"
-"   background:#2d2d2d;\n"
-"   border-style: solid; \n"
-"   color:#ff5533;\n"
-"}")
+        self.btn_prev_mon.setMinimumSize(QtCore.QSize(150, 40))
+        self.btn_prev_mon.setStyleSheet("background-image: url(:/res_files/prev_mon.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;\n"
+"")
         self.btn_prev_mon.setObjectName("btn_prev_mon")
         self.verticalLayout_4.addWidget(self.btn_prev_mon)
         self.btn_select_date = QtWidgets.QPushButton(self.frame_top_menus)
-        self.btn_select_date.setMinimumSize(QtCore.QSize(0, 40))
-        self.btn_select_date.setStyleSheet("QPushButton {\n"
-"                                         \n"
-"    background-color:#232323;\n"
-"    border-style: solid;\n"
-"    border-width: 0px;\n"
-"    border-radius: 0px;\n"
-"    border-color: #ff5533;\n"
-"    font:  14px;\n"
-"    padding: 0px;\n"
-"    color:  #ff5533;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background:  #ff5533;\n"
-"    color:#262a2f;\n"
-"} \n"
-"QPushButton:pressed {                              \n"
-"   background: #2d2d2d;\n"
-"   border-style: solid; \n"
-"   color:#ff5533;\n"
-"}")
+        self.btn_select_date.setMinimumSize(QtCore.QSize(150, 40))
+        self.btn_select_date.setStyleSheet("background-image: url(:/res_files/select.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;\n"
+"")
         self.btn_select_date.setObjectName("btn_select_date")
         self.verticalLayout_4.addWidget(self.btn_select_date)
         self.verticalLayout_3.addWidget(self.frame_top_menus, 0, QtCore.Qt.AlignTop)
@@ -221,7 +206,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.date_in = QtWidgets.QDateEdit(self.frame)
-        self.date_in.setMinimumSize(QtCore.QSize(130, 25))
+        self.date_in.setMinimumSize(QtCore.QSize(99, 25))
         self.date_in.setStyleSheet("QDateEdit {                                  \n"
 "    background-color: #262a2f; \n"
 "    border-style: solid;\n"
@@ -253,7 +238,7 @@ class Ui_MainWindow(object):
         self.date_in.setObjectName("date_in")
         self.horizontalLayout_4.addWidget(self.date_in)
         self.date_out = QtWidgets.QDateEdit(self.frame)
-        self.date_out.setMinimumSize(QtCore.QSize(130, 25))
+        self.date_out.setMinimumSize(QtCore.QSize(99, 25))
         self.date_out.setStyleSheet("QDateEdit {\n"
 "                                         \n"
 "    background-color: #262a2f; \n"
@@ -298,7 +283,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.update_selected_date.sizePolicy().hasHeightForWidth())
         self.update_selected_date.setSizePolicy(sizePolicy)
-        self.update_selected_date.setMinimumSize(QtCore.QSize(150, 25))
+        self.update_selected_date.setMinimumSize(QtCore.QSize(99, 25))
         self.update_selected_date.setMaximumSize(QtCore.QSize(150, 16777215))
         self.update_selected_date.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.update_selected_date.setAcceptDrops(False)
@@ -506,3 +491,4 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "Текущий месяц"))
         self.update_prev_mon.setText(_translate("MainWindow", "Показать"))
         self.label_2.setText(_translate("MainWindow", "Прошлый месяц"))
+

@@ -73,7 +73,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         # prepare_canvas_and_toolbar(self.prev_plot_widget, parent=self)
         #self.time_curr_mon.setWordWrapMode(QtGui.QTextOption.NoWrap)
         #prepare_canvas_and_toolbar(parent=self)
-        self.btn_toggle.clicked.connect(lambda: self.toggleMenu(250, True))
+        self.btn_toggle.clicked.connect(lambda: self.toggleMenu(170, True))
 
     def toggleMenu(self, maxWidth, enable):
         if enable:
@@ -81,10 +81,10 @@ class MainWindow(QMainWindow,Ui_MainWindow):
             # получаем значение Width
             width = self.frame_left_menu.width()
             maxExtend = maxWidth
-            standart = 150
+            standart = 50
 
             # задаем макс значание width
-            if width == 150:
+            if width == 50:
                 widthExtend = maxExtend
             else:
                 widthExtend = standart
