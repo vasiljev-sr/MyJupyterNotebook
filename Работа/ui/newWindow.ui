@@ -384,8 +384,308 @@ QPushButton:pressed {
              </size>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
+            <widget class="QWidget" name="selected_data_page">
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="options_frame_selected">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(45, 45, 45);</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QPushButton" name="update_selected_date">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>131</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+                                         
+    background-color: #ff5533;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #1e2027;
+}
+QPushButton:hover {
+    background: #262a2f; 
+    color:#ff5533;
+} 
+QPushButton:pressed {                              
+   background: #262a2f;
+   border-style: solid; 
+   color:#ff5533;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Показать</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>560</x>
+                   <y>10</y>
+                   <width>131</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>ВЫбрать дату</string>
+                 </property>
+                </widget>
+                <widget class="QDateEdit" name="date_in">
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>0</y>
+                   <width>130</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QDateEdit {                                  
+    background-color: #262a2f; 
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #ffffff; 
+}
+
+
+
+
+</string>
+                 </property>
+                 <property name="wrapping">
+                  <bool>false</bool>
+                 </property>
+                 <property name="frame">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="readOnly">
+                  <bool>false</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::PlusMinus</enum>
+                 </property>
+                 <property name="accelerated">
+                  <bool>false</bool>
+                 </property>
+                 <property name="showGroupSeparator" stdset="0">
+                  <bool>true</bool>
+                 </property>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2021</year>
+                   <month>9</month>
+                   <day>14</day>
+                  </datetime>
+                 </property>
+                 <property name="minimumDate">
+                  <date>
+                   <year>2021</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                 <property name="maximumTime">
+                  <time>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                  </time>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="timeSpec">
+                  <enum>Qt::TimeZone</enum>
+                 </property>
+                </widget>
+                <widget class="QDateEdit" name="date_out">
+                 <property name="geometry">
+                  <rect>
+                   <x>310</x>
+                   <y>0</y>
+                   <width>130</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QDateEdit {
+                                         
+    background-color: #262a2f; 
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #ffffff; 
+}
+
+
+
+
+</string>
+                 </property>
+                 <property name="wrapping">
+                  <bool>false</bool>
+                 </property>
+                 <property name="frame">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="readOnly">
+                  <bool>false</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::PlusMinus</enum>
+                 </property>
+                 <property name="accelerated">
+                  <bool>false</bool>
+                 </property>
+                 <property name="showGroupSeparator" stdset="0">
+                  <bool>true</bool>
+                 </property>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2021</year>
+                   <month>9</month>
+                   <day>15</day>
+                  </datetime>
+                 </property>
+                 <property name="minimumDate">
+                  <date>
+                   <year>2021</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                 <property name="maximumTime">
+                  <time>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                  </time>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="date">
+                  <date>
+                   <year>2021</year>
+                   <month>9</month>
+                   <day>15</day>
+                  </date>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="plot_frame_selected">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_11">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QWidget" name="selected_plot_widget" native="true">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">
+background-color: rgb(45, 45, 45);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
             <widget class="QWidget" name="curr_mon_page">
              <layout class="QVBoxLayout" name="verticalLayout_6">
               <property name="spacing">
@@ -429,7 +729,7 @@ QPushButton:pressed {
                 <widget class="QPushButton" name="update_curr_mon">
                  <property name="geometry">
                   <rect>
-                   <x>630</x>
+                   <x>10</x>
                    <y>0</y>
                    <width>131</width>
                    <height>31</height>
@@ -459,53 +759,7 @@ QPushButton:pressed {
 }</string>
                  </property>
                  <property name="text">
-                  <string>Обновить</string>
-                 </property>
-                </widget>
-                <widget class="QTextEdit" name="time_curr_mon">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>0</y>
-                   <width>81</width>
-                   <height>31</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>-1</pointsize>
-                   <weight>50</weight>
-                   <italic>false</italic>
-                   <bold>false</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QTextEdit {
-                                         
-    background-color: #262a2f; 
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 0px;
-    border-color: #ff5533;
-    font:  16px;
-    min-width: 1em;
-    padding: 0px;
-    color: #ffffff;
-}
-QTextEdit:hover {
-    background: #262a2f; 
-    color:#ffffff;
-} </string>
-                 </property>
-                 <property name="lineWrapColumnOrWidth">
-                  <number>0</number>
-                 </property>
-                 <property name="html">
-                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;300&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>Показать</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label">
@@ -632,7 +886,7 @@ background-color: rgb(45, 45, 45);</string>
                 <widget class="QPushButton" name="update_prev_mon">
                  <property name="geometry">
                   <rect>
-                   <x>630</x>
+                   <x>10</x>
                    <y>0</y>
                    <width>131</width>
                    <height>31</height>
@@ -662,53 +916,7 @@ QPushButton:pressed {
 }</string>
                  </property>
                  <property name="text">
-                  <string>Обновить</string>
-                 </property>
-                </widget>
-                <widget class="QTextEdit" name="time_prev_mon">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>0</y>
-                   <width>81</width>
-                   <height>31</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>-1</pointsize>
-                   <weight>50</weight>
-                   <italic>false</italic>
-                   <bold>false</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QTextEdit {
-                                         
-    background-color: #262a2f; 
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 0px;
-    border-color: #ff5533;
-    font:  16px;
-    min-width: 1em;
-    padding: 0px;
-    color: #ffffff;
-}
-QTextEdit:hover {
-    background: #262a2f; 
-    color:#ffffff;
-} </string>
-                 </property>
-                 <property name="lineWrapColumnOrWidth">
-                  <number>0</number>
-                 </property>
-                 <property name="html">
-                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;300&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>Показать</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_2">
