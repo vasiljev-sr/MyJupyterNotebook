@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>500</height>
+    <width>1008</width>
+    <height>505</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -122,7 +122,7 @@
             <property name="styleSheet">
              <string notr="true">QPushButton {
                                          
-    background-color: #232323;
+    background-color: #262a2f;
     border-style: solid;
     border-width: 0px;
     border-radius: 0px;
@@ -132,27 +132,17 @@
     color:  #ff5533;
 }
 QPushButton:hover {
-    background:  #232323;
+    background:  #ff5533;
     color:#262a2f;
 } 
 QPushButton:pressed {                              
-   background: #ff5533;
+   background: #262a2f;
    border-style: solid; 
    color:#ff5533;
 }</string>
             </property>
             <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>toggle_icon.png</normaloff>toggle_icon.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>32</width>
-              <height>32</height>
-             </size>
+             <string>TOGGLE</string>
             </property>
            </widget>
           </item>
@@ -275,7 +265,6 @@ QPushButton:pressed {
                </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton {
-	background-color: rgb(85, 255, 255);
                                          
     background-color: #232323;
     border-style: solid;
@@ -286,13 +275,12 @@ QPushButton:pressed {
     padding: 0px;
     color:  #ff5533;
 }
-
 QPushButton:hover {
     background:  #ff5533;
     color:#262a2f;
 } 
 QPushButton:pressed {                              
-   background:#2d2d2d;
+   background: #262a2f;
    border-style: solid; 
    color:#ff5533;
 }</string>
@@ -327,7 +315,7 @@ QPushButton:hover {
     color:#262a2f;
 } 
 QPushButton:pressed {                              
-   background:#2d2d2d;
+   background: #262a2f;
    border-style: solid; 
    color:#ff5533;
 }</string>
@@ -362,7 +350,7 @@ QPushButton:hover {
     color:#262a2f;
 } 
 QPushButton:pressed {                              
-   background: #2d2d2d;
+   background: #262a2f;
    border-style: solid; 
    color:#ff5533;
 }</string>
@@ -433,245 +421,22 @@ QPushButton:pressed {
                  <string notr="true">background-color: rgb(45, 45, 45);</string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_3">
-                 <property name="spacing">
-                  <number>0</number>
+                <widget class="QPushButton" name="update_selected_date">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>131</width>
+                   <height>31</height>
+                  </rect>
                  </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item alignment="Qt::AlignLeft">
-                  <widget class="QFrame" name="frame">
-                   <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_4">
-                    <item>
-                     <widget class="QDateEdit" name="date_in">
-                      <property name="minimumSize">
-                       <size>
-                        <width>130</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QDateEdit {                                  
-    background-color: #262a2f; 
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 0px;
-    border-color: #ff5533;
-    font:  16px;
-    min-width: 5em;
-    padding: 0px;
-    color: #ffffff; 
-}
-
-
-
-
-</string>
-                      </property>
-                      <property name="wrapping">
-                       <bool>false</bool>
-                      </property>
-                      <property name="frame">
-                       <bool>true</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                      <property name="readOnly">
-                       <bool>false</bool>
-                      </property>
-                      <property name="buttonSymbols">
-                       <enum>QAbstractSpinBox::PlusMinus</enum>
-                      </property>
-                      <property name="accelerated">
-                       <bool>false</bool>
-                      </property>
-                      <property name="showGroupSeparator" stdset="0">
-                       <bool>true</bool>
-                      </property>
-                      <property name="dateTime">
-                       <datetime>
-                        <hour>0</hour>
-                        <minute>0</minute>
-                        <second>0</second>
-                        <year>2021</year>
-                        <month>9</month>
-                        <day>14</day>
-                       </datetime>
-                      </property>
-                      <property name="minimumDate">
-                       <date>
-                        <year>2021</year>
-                        <month>1</month>
-                        <day>1</day>
-                       </date>
-                      </property>
-                      <property name="maximumTime">
-                       <time>
-                        <hour>0</hour>
-                        <minute>0</minute>
-                        <second>0</second>
-                       </time>
-                      </property>
-                      <property name="calendarPopup">
-                       <bool>true</bool>
-                      </property>
-                      <property name="timeSpec">
-                       <enum>Qt::TimeZone</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QDateEdit" name="date_out">
-                      <property name="minimumSize">
-                       <size>
-                        <width>130</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QDateEdit {
-                                         
-    background-color: #262a2f; 
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 0px;
-    border-color: #ff5533;
-    font:  16px;
-    min-width: 5em;
-    padding: 0px;
-    color: #ffffff; 
-}
-
-
-
-
-</string>
-                      </property>
-                      <property name="wrapping">
-                       <bool>false</bool>
-                      </property>
-                      <property name="frame">
-                       <bool>true</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                      <property name="readOnly">
-                       <bool>false</bool>
-                      </property>
-                      <property name="buttonSymbols">
-                       <enum>QAbstractSpinBox::PlusMinus</enum>
-                      </property>
-                      <property name="accelerated">
-                       <bool>false</bool>
-                      </property>
-                      <property name="showGroupSeparator" stdset="0">
-                       <bool>true</bool>
-                      </property>
-                      <property name="dateTime">
-                       <datetime>
-                        <hour>0</hour>
-                        <minute>0</minute>
-                        <second>0</second>
-                        <year>2021</year>
-                        <month>9</month>
-                        <day>15</day>
-                       </datetime>
-                      </property>
-                      <property name="minimumDate">
-                       <date>
-                        <year>2021</year>
-                        <month>1</month>
-                        <day>1</day>
-                       </date>
-                      </property>
-                      <property name="maximumTime">
-                       <time>
-                        <hour>0</hour>
-                        <minute>0</minute>
-                        <second>0</second>
-                       </time>
-                      </property>
-                      <property name="calendarPopup">
-                       <bool>true</bool>
-                      </property>
-                      <property name="date">
-                       <date>
-                        <year>2021</year>
-                        <month>9</month>
-                        <day>15</day>
-                       </date>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item alignment="Qt::AlignRight">
-                  <widget class="QFrame" name="frame_2">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_5">
-                    <item>
-                     <widget class="QPushButton" name="update_selected_date">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>150</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>150</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::StrongFocus</enum>
-                      </property>
-                      <property name="acceptDrops">
-                       <bool>false</bool>
-                      </property>
-                      <property name="toolTip">
-                       <string/>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
                                          
     background-color: #ff5533;
     border-style: solid;
@@ -692,38 +457,190 @@ QPushButton:pressed {
    border-style: solid; 
    color:#ff5533;
 }</string>
-                      </property>
-                      <property name="text">
-                       <string>Показать</string>
-                      </property>
-                      <property name="autoDefault">
-                       <bool>false</bool>
-                      </property>
-                      <property name="default">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeType">
-                       <enum>QSizePolicy::Fixed</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>25</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
+                 </property>
+                 <property name="text">
+                  <string>Показать</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>560</x>
+                   <y>10</y>
+                   <width>131</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>ВЫбрать дату</string>
+                 </property>
+                </widget>
+                <widget class="QDateEdit" name="date_in">
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>0</y>
+                   <width>130</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QDateEdit {                                  
+    background-color: #262a2f; 
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #ffffff; 
+}
+
+
+
+
+</string>
+                 </property>
+                 <property name="wrapping">
+                  <bool>false</bool>
+                 </property>
+                 <property name="frame">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="readOnly">
+                  <bool>false</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::PlusMinus</enum>
+                 </property>
+                 <property name="accelerated">
+                  <bool>false</bool>
+                 </property>
+                 <property name="showGroupSeparator" stdset="0">
+                  <bool>true</bool>
+                 </property>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2021</year>
+                   <month>9</month>
+                   <day>14</day>
+                  </datetime>
+                 </property>
+                 <property name="minimumDate">
+                  <date>
+                   <year>2021</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                 <property name="maximumTime">
+                  <time>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                  </time>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="timeSpec">
+                  <enum>Qt::TimeZone</enum>
+                 </property>
+                </widget>
+                <widget class="QDateEdit" name="date_out">
+                 <property name="geometry">
+                  <rect>
+                   <x>310</x>
+                   <y>0</y>
+                   <width>130</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QDateEdit {
+                                         
+    background-color: #262a2f; 
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #ffffff; 
+}
+
+
+
+
+</string>
+                 </property>
+                 <property name="wrapping">
+                  <bool>false</bool>
+                 </property>
+                 <property name="frame">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="readOnly">
+                  <bool>false</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::PlusMinus</enum>
+                 </property>
+                 <property name="accelerated">
+                  <bool>false</bool>
+                 </property>
+                 <property name="showGroupSeparator" stdset="0">
+                  <bool>true</bool>
+                 </property>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2021</year>
+                   <month>9</month>
+                   <day>15</day>
+                  </datetime>
+                 </property>
+                 <property name="minimumDate">
+                  <date>
+                   <year>2021</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                 <property name="maximumTime">
+                  <time>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                  </time>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="date">
+                  <date>
+                   <year>2021</year>
+                   <month>9</month>
+                   <day>15</day>
+                  </date>
+                 </property>
+                </widget>
                </widget>
               </item>
               <item>
@@ -762,6 +679,22 @@ QPushButton:pressed {
                     <string notr="true">
 background-color: rgb(45, 45, 45);</string>
                    </property>
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="geometry">
+                     <rect>
+                      <x>40</x>
+                      <y>30</y>
+                      <width>75</width>
+                      <height>23</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
                   </widget>
                  </item>
                 </layout>

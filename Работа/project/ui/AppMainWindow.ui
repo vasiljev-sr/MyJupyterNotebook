@@ -47,7 +47,7 @@ border-color: rgb(255, 255, 255);
 </string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="curr_mon_page">
      <widget class="QWidget" name="curr_plot_1" native="true">
@@ -223,12 +223,77 @@ QPushButton:pressed {
        <rect>
         <x>20</x>
         <y>80</y>
-        <width>731</width>
-        <height>431</height>
+        <width>200</width>
+        <height>200</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgb(38, 42, 47);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="prev_plot_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>80</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(38, 42, 47);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="prev_plot_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(38, 42, 47);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="prev_plot_5" native="true">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>310</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(38, 42, 47);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="prev_plot_6" native="true">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>310</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(38, 42, 47);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="prev_plot_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>80</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(38, 42, 47);</string>
       </property>
      </widget>
      <widget class="QTextEdit" name="time_prev_mon">
@@ -658,7 +723,7 @@ QPushButton:pressed {
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="btn_select_date">
+    <widget class="QPushButton" name="btn__select_date">
      <property name="geometry">
       <rect>
        <x>20</x>

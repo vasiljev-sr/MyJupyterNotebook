@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 from datetime import datetime as dt
 from datetime import date, timedelta
-# import mysql.connector
-# from mysql.connector import Error
+import mysql.connector
+from mysql.connector import Error
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
@@ -18,7 +18,6 @@ class MachineStatistics:
         self.prev_month_last_day = self.today.replace(day=1) - timedelta(days=1)
         self.prev_month_start_day = self.today.replace(day=1) - timedelta(days=self.prev_month_last_day.day)
         self.curr_month_start_day = self.today.replace(day=1)
-        self.test_data = {1: [10,20], 2: [10,25], 4: [10,30], 5: [10,35], 6: [10,40]}
 
     def read_database(self, date_in, date_out, id_num=1):
         conn = mysql.connector.connect(host='172.15.0.225',
@@ -41,7 +40,7 @@ class MachineStatistics:
         df_diff = pd.DataFrame(np.diff(df.ts), columns=['time_diff'])
         return df_diff
 
-    def prev_mon_pie_plot(self, id_num=1, time=300):
+    def prev_mon_date(self, id_num=1, time=300):
         day_in = str(self.prev_month_start_day) + ' 00:00:00'
         day_out = str(self.prev_month_last_day) + ' 23:59:59'
         df = self.find_diff(self.read_database(day_in, day_out, id_num))
@@ -54,10 +53,9 @@ class MachineStatistics:
         work_time = total_time - down_time  # время работы
 
         plot_df = pd.DataFrame([down_time, work_time], index=['Время простоя', 'Время работы'], columns=['секунды'])
-        fig, ax = self.bild_plot(plot_df)
-        return fig, ax
+        return plot_df
 
-    def curr_mon_pie_plot(self, id_num=1, time=300):
+    def curr_mon_date(self, id_num=1, time=300):
         day_in = str(self.curr_month_start_day) + ' 00:00:00'
         day_out = str(self.today) + ' 23:59:59'
         df = self.find_diff(self.read_database(day_in, day_out, id_num))
@@ -69,10 +67,9 @@ class MachineStatistics:
         work_time = total_time - down_time  # время работы
 
         plot_df = pd.DataFrame([down_time, work_time], index=['Время простоя', 'Время работы'], columns=['секунды'])
-        fig, ax = self.bild_plot(plot_df)
-        return fig, ax
+        return plot_df
 
-    def pie_plot(self, day_in, day_out, id_num=1, time=300):
+    def selected_date(self, day_in, day_out, id_num=1, time=300):
         df = self.find_diff(self.read_database(day_in, day_out, id_num))
 
         down_time = df.query('time_diff > @time').time_diff.sum()  # время простоя
@@ -80,8 +77,8 @@ class MachineStatistics:
         work_time = total_time - down_time  # время работы
 
         plot_df = pd.DataFrame([down_time, work_time], index=['Время простоя', 'Время работы'], columns=['секунды'])
-        fig, ax = self.bild_plot(plot_df)
-        return fig, ax
+
+        return plot_df
 
 
     def bild_plot(self,plot_df):
@@ -104,7 +101,7 @@ class MachineStatistics:
         return fig, ax
 
 
-    def test_plot(self, id_num=1, time=300):
+    def test_plot(self, id_num=1, time=400):
         day_in = str(self.curr_month_start_day) + ' 00:00:00'
         day_out = str(self.today) + ' 23:59:59'
         # day_in = str(self.prev_month_start_day) + ' 00:00:00'
@@ -116,6 +113,3 @@ class MachineStatistics:
         work_time = total_time - down_time  # время работы
         plot_df = pd.DataFrame([down_time, work_time], index=['Время простоя', 'Время работы'], columns=['секунды'])
         return plot_df
-
-    def test_func(self, id):
-        return self.test_data[id]

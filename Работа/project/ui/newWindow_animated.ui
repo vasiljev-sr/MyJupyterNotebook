@@ -108,7 +108,7 @@ QPushButton:hover {
     color:#262a2f;
 } 
 QPushButton:pressed {                              
-   background: #2d2d2d;
+   background: #232323;
    border-style: solid; 
    color:#ff5533;
 }</string>
@@ -454,6 +454,21 @@ background-position: center left;
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <property name="spacing">
+                     <number>10</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
                     <item>
                      <widget class="QDateEdit" name="date_in">
                       <property name="minimumSize">
@@ -461,6 +476,9 @@ background-position: center left;
                         <width>99</width>
                         <height>25</height>
                        </size>
+                      </property>
+                      <property name="toolTip">
+                       <string>Выберете начальную дату</string>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">QDateEdit {                                  
@@ -541,6 +559,12 @@ background-position: center left;
                         <height>25</height>
                        </size>
                       </property>
+                      <property name="toolTip">
+                       <string>Выберете конечную дату</string>
+                      </property>
+                      <property name="toolTipDuration">
+                       <number>-1</number>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">QDateEdit {
                                          
@@ -620,8 +644,58 @@ background-position: center left;
                    </layout>
                   </widget>
                  </item>
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>50</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="selected_data_label">
+                   <property name="maximumSize">
+                    <size>
+                     <width>500</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>Диаграммы по выбранной дате</string>
+                   </property>
+                  </widget>
+                 </item>
                  <item alignment="Qt::AlignRight">
                   <widget class="QFrame" name="frame_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>0</height>
+                    </size>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -629,6 +703,21 @@ background-position: center left;
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>29</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
                     <item>
                      <widget class="QPushButton" name="update_selected_date">
                       <property name="sizePolicy">
@@ -639,7 +728,7 @@ background-position: center left;
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>99</width>
+                        <width>150</width>
                         <height>25</height>
                        </size>
                       </property>
@@ -695,22 +784,6 @@ QPushButton:pressed {
                       </property>
                      </widget>
                     </item>
-                    <item>
-                     <spacer name="horizontalSpacer">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeType">
-                       <enum>QSizePolicy::Fixed</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>25</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -748,6 +821,11 @@ QPushButton:pressed {
                      <horstretch>0</horstretch>
                      <verstretch>0</verstretch>
                     </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Modern</family>
+                    </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">
@@ -800,17 +878,116 @@ background-color: rgb(45, 45, 45);</string>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-                <widget class="QPushButton" name="update_curr_mon">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>0</y>
-                   <width>131</width>
-                   <height>31</height>
-                  </rect>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <property name="spacing">
+                  <number>0</number>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton {
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_5">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="selected_data_label_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>500</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>Диаграммы по текущему месяцу</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>100</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item alignment="Qt::AlignRight">
+                  <widget class="QFrame" name="frame_6">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>30</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="update_curr_mon">
+                      <property name="minimumSize">
+                       <size>
+                        <width>150</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
                                          
     background-color: #ff5533;
     border-style: solid;
@@ -831,27 +1008,16 @@ QPushButton:pressed {
    border-style: solid; 
    color:#ff5533;
 }</string>
-                 </property>
-                 <property name="text">
-                  <string>Показать</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label">
-                 <property name="geometry">
-                  <rect>
-                   <x>290</x>
-                   <y>10</y>
-                   <width>131</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="text">
-                  <string>Текущий месяц</string>
-                 </property>
-                </widget>
+                      </property>
+                      <property name="text">
+                       <string>Показать</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
@@ -894,22 +1060,6 @@ background-color: rgb(45, 45, 45);</string>
                     <string notr="true">
 background-color: rgb(45, 45, 45);</string>
                    </property>
-                   <widget class="QLabel" name="label_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>370</x>
-                      <y>120</y>
-                      <width>131</width>
-                      <height>16</height>
-                     </rect>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(255, 255, 255);</string>
-                    </property>
-                    <property name="text">
-                     <string>Текущий месяц</string>
-                    </property>
-                   </widget>
                   </widget>
                  </item>
                 </layout>
@@ -957,17 +1107,116 @@ background-color: rgb(45, 45, 45);</string>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-                <widget class="QPushButton" name="update_prev_mon">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>0</y>
-                   <width>131</width>
-                   <height>31</height>
-                  </rect>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <property name="spacing">
+                  <number>0</number>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton {
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_3">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="selected_data_label_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>500</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>Диаграммы по прошлому месяцу</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>100</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item alignment="Qt::AlignRight">
+                  <widget class="QFrame" name="frame_4">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_12">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>30</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="update_prev_mon">
+                      <property name="minimumSize">
+                       <size>
+                        <width>99</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
                                          
     background-color: #ff5533;
     border-style: solid;
@@ -988,27 +1237,16 @@ QPushButton:pressed {
    border-style: solid; 
    color:#ff5533;
 }</string>
-                 </property>
-                 <property name="text">
-                  <string>Показать</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_2">
-                 <property name="geometry">
-                  <rect>
-                   <x>350</x>
-                   <y>10</y>
-                   <width>131</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="text">
-                  <string>Прошлый месяц</string>
-                 </property>
-                </widget>
+                      </property>
+                      <property name="text">
+                       <string>Показать</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
@@ -1070,7 +1308,7 @@ background-color: rgb(45, 45, 45);</string>
   </widget>
  </widget>
  <resources>
-  <include location="res_files.qrc"/>
+  <include location="../../../../MyJupyterNotebook/Работа/project/ui/res_files.qrc"/>
  </resources>
  <connections/>
 </ui>
