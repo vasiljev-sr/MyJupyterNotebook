@@ -3,6 +3,7 @@
     <file>toggle_icon.png</file>
     <file>icon_curr.png</file>
     <file>prev_mon.png</file>
+    <file>menu.png</file>
     <file>select.png</file>
     <file>vesi.png</file>
     <file>vlazhn.png</file>

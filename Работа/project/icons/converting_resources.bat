@@ -1,0 +1,1 @@
+pyrcc5 -o C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\icons\resources.py C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\icons\resources.qrc

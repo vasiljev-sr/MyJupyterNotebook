@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 from datetime import datetime as dt
 from datetime import date, timedelta
-import mysql.connector
-from mysql.connector import Error
+# import mysql.connector
+# from mysql.connector import Error
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 

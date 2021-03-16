@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="res_files">
-    <file>toggle_icon.png</file>
-    <file>icon_curr.png</file>
-  </qresource>
-</RCC>
